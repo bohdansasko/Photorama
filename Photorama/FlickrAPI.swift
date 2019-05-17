@@ -27,7 +27,7 @@ extension DateFormatter {
 struct FlickrAPI {
     static var interestingPhotosURL: URL {
         return flickrURL(method: .interestingPhotos,
-                         parameters: ["extras": "url_h,date_taken"])
+                         parameters: ["extras": "url_s,date_taken"])
     }
     
     private static let kBaseURLString = "https://api.flickr.com/services/rest"
@@ -57,8 +57,9 @@ struct FlickrAPI {
             let item = URLQueryItem(name: key, value: value)
             queryItems.append(item)
         }
-        
+    
         components.queryItems = queryItems
+        print(components)
         return components.url!
     }
     

@@ -61,16 +61,24 @@
 			isa = PBXGroup;
 			children = (
 				207D838C2287F8FB00FACB24 /* AppDelegate.swift */,
-				207D838E2287F8FB00FACB24 /* PhotosViewController.swift */,
-				207D83A22288075B00FACB24 /* Photo.swift */,
 				207D839E2287FD5D00FACB24 /* FlickrAPI.swift */,
-				207D83A02288033900FACB24 /* PhotoStore.swift */,
+				C7B05BE7228EE99D008AC9F1 /* Photos */,
 				207D83902287F8FB00FACB24 /* Main.storyboard */,
 				207D83932287F8FC00FACB24 /* Assets.xcassets */,
 				207D83952287F8FC00FACB24 /* LaunchScreen.storyboard */,
 				207D83982287F8FC00FACB24 /* Info.plist */,
 			);
 			path = Photorama;
+			sourceTree = "<group>";
+		};
+		C7B05BE7228EE99D008AC9F1 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				207D838E2287F8FB00FACB24 /* PhotosViewController.swift */,
+				207D83A22288075B00FACB24 /* Photo.swift */,
+				207D83A02288033900FACB24 /* PhotoStore.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,13 +305,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ8948VJT6;
 				INFOPLIST_FILE = Photorama/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinso.Photorama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -315,13 +324,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ8948VJT6;
 				INFOPLIST_FILE = Photorama/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinso.Photorama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
