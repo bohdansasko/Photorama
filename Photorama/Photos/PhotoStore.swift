@@ -33,6 +33,12 @@ class PhotoStore {
         let url = FlickrAPI.interestingPhotosURL
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request) { data, response, error in
+            print("===========\(#function)======================")
+            if let httpResponse = response as? HTTPURLResponse {
+                print("status code: \(httpResponse.statusCode)")
+                print("headerFields: \(httpResponse.allHeaderFields)")
+            }
+            
             guard error == nil else {
                 print("error fetching interesting photos: \(error!.localizedDescription)")
                 return
@@ -56,6 +62,12 @@ class PhotoStore {
         let request = URLRequest(url: photoURL)
         
         let task = session.dataTask(with: request, completionHandler: { data, response, error in
+            print("===========\(#function)======================")
+            if let httpResponse = response as? HTTPURLResponse {
+                print("status code: \(httpResponse.statusCode)")
+                print("headerFields: \(httpResponse.allHeaderFields)")
+            }
+            
             let result = self.processImageResult(data: data, error: error)
             OperationQueue.main.addOperation {
                 completion(result)
