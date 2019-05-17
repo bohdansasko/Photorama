@@ -15,6 +15,7 @@
 		207D839F2287FD5D00FACB24 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D839E2287FD5D00FACB24 /* FlickrAPI.swift */; };
 		207D83A12288033900FACB24 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D83A02288033900FACB24 /* PhotoStore.swift */; };
 		207D83A32288075B00FACB24 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D83A22288075B00FACB24 /* Photo.swift */; };
+		C7966797228F12FB0035F612 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7966796228F12FB0035F612 /* PhotoDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		207D839E2287FD5D00FACB24 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		207D83A02288033900FACB24 /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		207D83A22288075B00FACB24 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C7966796228F12FB0035F612 /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				207D838E2287F8FB00FACB24 /* PhotosViewController.swift */,
 				207D83A22288075B00FACB24 /* Photo.swift */,
 				207D83A02288033900FACB24 /* PhotoStore.swift */,
+				C7966796228F12FB0035F612 /* PhotoDataSource.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				207D839F2287FD5D00FACB24 /* FlickrAPI.swift in Sources */,
 				207D838F2287F8FB00FACB24 /* PhotosViewController.swift in Sources */,
 				207D83A12288033900FACB24 /* PhotoStore.swift in Sources */,
+				C7966797228F12FB0035F612 /* PhotoDataSource.swift in Sources */,
 				207D838D2287F8FB00FACB24 /* AppDelegate.swift in Sources */,
 				207D83A32288075B00FACB24 /* Photo.swift in Sources */,
 			);

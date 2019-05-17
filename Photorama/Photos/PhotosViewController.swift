@@ -9,36 +9,27 @@
 import UIKit
 
 class PhotosViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var store: PhotoStore!
+    var photoDataSource = PhotoDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        collectionView.dataSource = photoDataSource
         
         store.fetchInterestingPhotos { photosResult in
             switch photosResult {
             case .success(let photos):
                 print("successfully found \(photos.count) photos")
-                if let fp = photos.first {
-                    self.updateImageView(for: fp)
-                }
+                self.photoDataSource.photos = photos
             case .failure(let error):
                 print("Error fetching interesting photos: \(error.localizedDescription)")
+                self.photoDataSource.photos.removeAll()
             }
+            self.collectionView.reloadSections(IndexSet(integer: 0))
         }
-            
     }
-
-    func updateImageView(for photo: Photo) {
-        store.fetchImage(for: photo, completion: { result in
-            switch result {
-            case .success(let image):
-                self.imageView.image = image
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        })
-    }
-
 }
 
