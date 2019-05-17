@@ -19,6 +19,9 @@ class PhotosViewController: UIViewController {
             switch photosResult {
             case .success(let photos):
                 print("successfully found \(photos.count) photos")
+                if let fp = photos.first {
+                    self.updateImageView(for: fp)
+                }
             case .failure(let error):
                 print("Error fetching interesting photos: \(error.localizedDescription)")
             }
@@ -26,6 +29,16 @@ class PhotosViewController: UIViewController {
             
     }
 
+    func updateImageView(for photo: Photo) {
+        store.fetchImage(for: photo, completion: { result in
+            switch result {
+            case .success(let image):
+                self.imageView.image = image
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
+    }
 
 }
 
