@@ -41,6 +41,12 @@ class Photo: Codable {
     }
 }
 
+extension Photo: Equatable {
+    static func == (lhs: Photo, rhs: Photo) -> Bool {
+        return lhs.photoID == rhs.photoID
+    }
+}
+
 class Photos: Decodable {
     let page: Int
     let pages: Int

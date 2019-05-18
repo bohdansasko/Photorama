@@ -18,6 +18,7 @@ class PhotosViewController: UIViewController {
         super.viewDidLoad()
 
         collectionView.dataSource = photoDataSource
+        collectionView.delegate = self
         
         store.fetchInterestingPhotos { photosResult in
             switch photosResult {
@@ -33,3 +34,23 @@ class PhotosViewController: UIViewController {
     }
 }
 
+extension PhotosViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let photo = photoDataSource.photos[indexPath.row]
+        
+        store.fetchImage(for: photo, completion: { [photo](result) in
+            
+            guard
+                let photoIndex = self.photoDataSource.photos.index(of: photo),
+                case let .success(image) = result
+            else {
+                return
+            }
+            
+            let photoIdxPath = IndexPath(item: photoIndex, section: 0)
+            if let cell = self.collectionView.cellForItem(at: photoIdxPath) as? PhotoCollectionViewCell {
+                cell.update(with: image)
+            }
+        })
+    }
+}
