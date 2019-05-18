@@ -29,6 +29,8 @@ class PhotoStore {
         return URLSession(configuration: config)
     }()
     
+    let imageStore = ImageStore()
+    
     func fetchInterestingPhotos(completion: @escaping (PhotosResult) -> Void) {
         let url = FlickrAPI.interestingPhotosURL
         let request = URLRequest(url: url)
@@ -58,6 +60,14 @@ class PhotoStore {
     }
     
     func fetchImage(for photo: Photo, completion: @escaping (ImageResult) -> Void) {
+        let photoKey = photo.photoID
+        if let image = imageStore.image(forKey: photoKey) {
+            OperationQueue.main.addOperation {
+                completion(.success(image))
+            }
+            return
+        }
+        
         let photoURL = photo.remoteURL
         let request = URLRequest(url: photoURL)
         
@@ -69,12 +79,18 @@ class PhotoStore {
             }
             
             let result = self.processImageResult(data: data, error: error)
+            if case let .success(image) = result {
+                self.imageStore.setImage(image, forKey: photoKey)
+            }
+            
             OperationQueue.main.addOperation {
                 completion(result)
             }
         })
         task.resume()
     }
+    
+    
     
     private func processImageResult(data: Data?, error: Error?) -> ImageResult {
         guard

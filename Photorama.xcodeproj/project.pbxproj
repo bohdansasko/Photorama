@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		201C485C229035A900000594 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201C485B229035A900000594 /* PhotoCollectionViewCell.swift */; };
+		201C485E2290402400000594 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201C485D2290402400000594 /* ImageStore.swift */; };
 		207D838D2287F8FB00FACB24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D838C2287F8FB00FACB24 /* AppDelegate.swift */; };
 		207D838F2287F8FB00FACB24 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D838E2287F8FB00FACB24 /* PhotosViewController.swift */; };
 		207D83922287F8FB00FACB24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207D83902287F8FB00FACB24 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		201C485B229035A900000594 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		201C485D2290402400000594 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		207D83892287F8FB00FACB24 /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207D838C2287F8FB00FACB24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207D838E2287F8FB00FACB24 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				207D838C2287F8FB00FACB24 /* AppDelegate.swift */,
 				207D839E2287FD5D00FACB24 /* FlickrAPI.swift */,
+				201C485D2290402400000594 /* ImageStore.swift */,
 				C7B05BE7228EE99D008AC9F1 /* Photos */,
 				207D83902287F8FB00FACB24 /* Main.storyboard */,
 				207D83932287F8FC00FACB24 /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 				207D839F2287FD5D00FACB24 /* FlickrAPI.swift in Sources */,
 				207D838F2287F8FB00FACB24 /* PhotosViewController.swift in Sources */,
 				207D83A12288033900FACB24 /* PhotoStore.swift in Sources */,
+				201C485E2290402400000594 /* ImageStore.swift in Sources */,
 				C7966797228F12FB0035F612 /* PhotoDataSource.swift in Sources */,
 				201C485C229035A900000594 /* PhotoCollectionViewCell.swift in Sources */,
 				207D838D2287F8FB00FACB24 /* AppDelegate.swift in Sources */,
