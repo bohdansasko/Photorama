@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201C485C229035A900000594 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201C485B229035A900000594 /* PhotoCollectionViewCell.swift */; };
 		207D838D2287F8FB00FACB24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D838C2287F8FB00FACB24 /* AppDelegate.swift */; };
 		207D838F2287F8FB00FACB24 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D838E2287F8FB00FACB24 /* PhotosViewController.swift */; };
 		207D83922287F8FB00FACB24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207D83902287F8FB00FACB24 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		201C485B229035A900000594 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		207D83892287F8FB00FACB24 /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207D838C2287F8FB00FACB24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207D838E2287F8FB00FACB24 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				207D83A22288075B00FACB24 /* Photo.swift */,
 				207D83A02288033900FACB24 /* PhotoStore.swift */,
 				C7966796228F12FB0035F612 /* PhotoDataSource.swift */,
+				201C485B229035A900000594 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				207D838F2287F8FB00FACB24 /* PhotosViewController.swift in Sources */,
 				207D83A12288033900FACB24 /* PhotoStore.swift in Sources */,
 				C7966797228F12FB0035F612 /* PhotoDataSource.swift in Sources */,
+				201C485C229035A900000594 /* PhotoCollectionViewCell.swift in Sources */,
 				207D838D2287F8FB00FACB24 /* AppDelegate.swift in Sources */,
 				207D83A32288075B00FACB24 /* Photo.swift in Sources */,
 			);
