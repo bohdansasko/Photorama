@@ -19,6 +19,7 @@
 		207D83A32288075B00FACB24 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D83A22288075B00FACB24 /* Photo.swift */; };
 		20865BC822916045004A4D1F /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20865BC722916045004A4D1F /* PhotoInfoViewController.swift */; };
 		C7966797228F12FB0035F612 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7966796228F12FB0035F612 /* PhotoDataSource.swift */; };
+		C799C0542292B48000E138DD /* FlipbookLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799C0532292B48000E138DD /* FlipbookLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		207D83A22288075B00FACB24 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		20865BC722916045004A4D1F /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 		C7966796228F12FB0035F612 /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
+		C799C0532292B48000E138DD /* FlipbookLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipbookLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				207D838E2287F8FB00FACB24 /* PhotosViewController.swift */,
 				201C485B229035A900000594 /* PhotoCollectionViewCell.swift */,
+				C799C0532292B48000E138DD /* FlipbookLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				207D83A12288033900FACB24 /* PhotoStore.swift in Sources */,
 				201C485E2290402400000594 /* ImageStore.swift in Sources */,
 				C7966797228F12FB0035F612 /* PhotoDataSource.swift in Sources */,
+				C799C0542292B48000E138DD /* FlipbookLayout.swift in Sources */,
 				201C485C229035A900000594 /* PhotoCollectionViewCell.swift in Sources */,
 				207D838D2287F8FB00FACB24 /* AppDelegate.swift in Sources */,
 				207D83A32288075B00FACB24 /* Photo.swift in Sources */,
