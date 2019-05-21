@@ -111,6 +111,22 @@ class PhotoStore {
         task.resume()
     }
     
+    func fetchAllPhotos(completion: @escaping (PhotosResult) -> Void) {
+        let fetchRequest: NSFetchRequest<MOPhoto> = MOPhoto.fetchRequest()
+        let sortByDateTaken = NSSortDescriptor(keyPath: \MOPhoto.dateTaken,
+                                               ascending: true)
+        fetchRequest.sortDescriptors = [sortByDateTaken]
+        
+        let viewContext = persistentContainer.viewContext
+        viewContext.perform {
+            do {
+                let moPhotos = try viewContext.fetch(fetchRequest)
+                completion(.success( moPhotos.compactMap({ Photo($0) }) ))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+    }
     
     
     private func processImageResult(data: Data?, error: Error?) -> ImageResult {

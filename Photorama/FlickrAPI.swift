@@ -76,6 +76,11 @@ struct FlickrAPI {
             }
             
             photos.photos.forEach({ _photo in
+                
+                if self.isPhotoInDB(context: context, _photo) {
+                    return
+                }
+                
                 print("save photo \(_photo.photoID)")
                 var photo: MOPhoto!
                 context.performAndWait {
@@ -91,6 +96,22 @@ struct FlickrAPI {
         } catch {
             return .failure(error)
         }
+    }
+    
+    private static func isPhotoInDB(context: NSManagedObjectContext, _ photo: Photo) -> Bool {
+        let fetchRequest: NSFetchRequest<MOPhoto> = MOPhoto.fetchRequest()
+        let predicate = NSPredicate(format: "\(#keyPath(MOPhoto.photoID)) == \(photo.photoID)", argumentArray: nil)
+        fetchRequest.predicate = predicate
+        
+        var fetchedPhotos: [MOPhoto]?
+        
+        context.performAndWait {
+            fetchedPhotos = try? context.fetch(fetchRequest)
+        }
+        if let _ = fetchedPhotos?.first {
+            return true
+        }
+        return false
     }
 }
 

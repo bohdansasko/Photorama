@@ -21,6 +21,14 @@ class Photo: Codable {
         case remoteUrl = "url_s"
     }
 
+    init(_ moPhoto: MOPhoto) {
+        title = moPhoto.title!
+        remoteURL = moPhoto.remoteURL! as URL
+        photoID = moPhoto.photoID!
+        dateTaken = moPhoto.dateTaken! as Date
+        
+    }
+    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         title = try container.decode(String.self, forKey: .title)
