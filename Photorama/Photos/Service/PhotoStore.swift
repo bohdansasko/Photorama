@@ -59,7 +59,17 @@ class PhotoStore {
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])                
                 let jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
-                let result = self.processPhotosRequest(data: jsonData, error: error)
+                var result = self.processPhotosRequest(data: jsonData, error: error)
+                
+                if case .success = result {
+                    do {
+                        try self.persistentContainer.viewContext.save()
+                    } catch {
+                        result = .failure(error)
+                        print("Core data saving error: \(error.localizedDescription)")
+                    }
+                }
+                
                 OperationQueue.main.addOperation {
                     completion(result)
                 }

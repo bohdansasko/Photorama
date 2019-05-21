@@ -103,10 +103,10 @@
 		207D838B2287F8FB00FACB24 /* Photorama */ = {
 			isa = PBXGroup;
 			children = (
-				209B15F0229391980093A040 /* CoreData */,
 				207D838C2287F8FB00FACB24 /* AppDelegate.swift */,
 				207D839E2287FD5D00FACB24 /* FlickrAPI.swift */,
 				201C485D2290402400000594 /* ImageStore.swift */,
+				209B15F0229391980093A040 /* CoreData */,
 				20865BC922916094004A4D1F /* PhotoInfo */,
 				C7B05BE7228EE99D008AC9F1 /* Photos */,
 				207D83902287F8FB00FACB24 /* Main.storyboard */,
