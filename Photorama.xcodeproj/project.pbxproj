@@ -87,8 +87,6 @@
 		207D83802287F8FB00FACB24 = {
 			isa = PBXGroup;
 			children = (
-				209B15EC229390BC0093A040 /* MOPhoto+CoreDataClass.swift */,
-				209B15ED229390BC0093A040 /* MOPhoto+CoreDataProperties.swift */,
 				207D838B2287F8FB00FACB24 /* Photorama */,
 				207D838A2287F8FB00FACB24 /* Products */,
 			);
@@ -105,6 +103,7 @@
 		207D838B2287F8FB00FACB24 /* Photorama */ = {
 			isa = PBXGroup;
 			children = (
+				209B15F0229391980093A040 /* CoreData */,
 				207D838C2287F8FB00FACB24 /* AppDelegate.swift */,
 				207D839E2287FD5D00FACB24 /* FlickrAPI.swift */,
 				201C485D2290402400000594 /* ImageStore.swift */,
@@ -133,6 +132,15 @@
 				20865BC722916045004A4D1F /* PhotoInfoViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		209B15F0229391980093A040 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				209B15EC229390BC0093A040 /* MOPhoto+CoreDataClass.swift */,
+				209B15ED229390BC0093A040 /* MOPhoto+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		C7B05BE7228EE99D008AC9F1 /* Photos */ = {
