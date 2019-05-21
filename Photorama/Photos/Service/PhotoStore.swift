@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 enum ImageResult {
     case success(UIImage)
@@ -30,6 +31,16 @@ class PhotoStore {
     }()
     
     let imageStore = ImageStore()
+    
+    let persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "Photorama")
+        container.loadPersistentStores(completionHandler: { description, error in
+            if let error = error {
+                print("error setting up Core Data (\(error))")
+            }
+        })
+        return container
+    }()
     
     func fetchInterestingPhotos(completion: @escaping (PhotosResult) -> Void) {
         let url = FlickrAPI.interestingPhotosURL
@@ -110,6 +121,6 @@ class PhotoStore {
         guard let jsonData = data else {
             return .failure(error!)
         }
-        return FlickrAPI.photos(fromJSON: jsonData)
+        return FlickrAPI.photos(fromJSON: jsonData, into: persistentContainer.viewContext)
     }
 }

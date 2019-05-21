@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 enum FlickrError: Error {
     case invalidJSONData
@@ -64,7 +65,7 @@ struct FlickrAPI {
         return components.url!
     }
     
-    static func photos(fromJSON data: Data) -> PhotosResult {
+    static func photos(fromJSON data: Data, into context: NSManagedObjectContext) -> PhotosResult {
         do {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .formatted(DateFormatter.flick)
@@ -73,6 +74,18 @@ struct FlickrAPI {
             if photos.photos.isEmpty {
                 return .failure(FlickrError.invalidJSONData)
             }
+            
+            photos.photos.forEach({ _photo in
+                print("save photo \(_photo.photoID)")
+                var photo: MOPhoto!
+                context.performAndWait {
+                    photo = MOPhoto(context: context)
+                    photo.title = _photo.title
+                    photo.photoID = _photo.photoID
+                    photo.remoteURL = _photo.remoteURL as NSURL
+                    photo.dateTaken = _photo.dateTaken as NSDate
+                }
+            })
             
             return .success(photos.photos)
         } catch {
