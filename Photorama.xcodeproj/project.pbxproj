@@ -19,8 +19,8 @@
 		207D83A32288075B00FACB24 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D83A22288075B00FACB24 /* Photo.swift */; };
 		20865BC822916045004A4D1F /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20865BC722916045004A4D1F /* PhotoInfoViewController.swift */; };
 		209B15E62293892E0093A040 /* Photorama.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 209B15E42293892E0093A040 /* Photorama.xcdatamodeld */; };
-		209B15EE229390BC0093A040 /* MOPhoto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209B15EC229390BC0093A040 /* MOPhoto+CoreDataClass.swift */; };
-		209B15EF229390BC0093A040 /* MOPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209B15ED229390BC0093A040 /* MOPhoto+CoreDataProperties.swift */; };
+		20BC65942299E28900398888 /* MOPhoto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC65922299E28900398888 /* MOPhoto+CoreDataClass.swift */; };
+		20BC65952299E28900398888 /* MOPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC65932299E28900398888 /* MOPhoto+CoreDataProperties.swift */; };
 		C7966797228F12FB0035F612 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7966796228F12FB0035F612 /* PhotoDataSource.swift */; };
 		C799C0542292B48000E138DD /* FlipbookLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799C0532292B48000E138DD /* FlipbookLayout.swift */; };
 /* End PBXBuildFile section */
@@ -40,8 +40,8 @@
 		207D83A22288075B00FACB24 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		20865BC722916045004A4D1F /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 		209B15E52293892E0093A040 /* Photorama.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photorama.xcdatamodel; sourceTree = "<group>"; };
-		209B15EC229390BC0093A040 /* MOPhoto+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MOPhoto+CoreDataClass.swift"; sourceTree = "<group>"; };
-		209B15ED229390BC0093A040 /* MOPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MOPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20BC65922299E28900398888 /* MOPhoto+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MOPhoto+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20BC65932299E28900398888 /* MOPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MOPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C7966796228F12FB0035F612 /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		C799C0532292B48000E138DD /* FlipbookLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipbookLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,8 +137,8 @@
 		209B15F0229391980093A040 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				209B15EC229390BC0093A040 /* MOPhoto+CoreDataClass.swift */,
-				209B15ED229390BC0093A040 /* MOPhoto+CoreDataProperties.swift */,
+				20BC65922299E28900398888 /* MOPhoto+CoreDataClass.swift */,
+				20BC65932299E28900398888 /* MOPhoto+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -224,13 +224,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				209B15EE229390BC0093A040 /* MOPhoto+CoreDataClass.swift in Sources */,
+				20BC65942299E28900398888 /* MOPhoto+CoreDataClass.swift in Sources */,
 				207D839F2287FD5D00FACB24 /* FlickrAPI.swift in Sources */,
 				207D838F2287F8FB00FACB24 /* PhotosViewController.swift in Sources */,
 				207D83A12288033900FACB24 /* PhotoStore.swift in Sources */,
 				201C485E2290402400000594 /* ImageStore.swift in Sources */,
 				C7966797228F12FB0035F612 /* PhotoDataSource.swift in Sources */,
-				209B15EF229390BC0093A040 /* MOPhoto+CoreDataProperties.swift in Sources */,
+				20BC65952299E28900398888 /* MOPhoto+CoreDataProperties.swift in Sources */,
 				C799C0542292B48000E138DD /* FlipbookLayout.swift in Sources */,
 				201C485C229035A900000594 /* PhotoCollectionViewCell.swift in Sources */,
 				209B15E62293892E0093A040 /* Photorama.xcdatamodeld in Sources */,

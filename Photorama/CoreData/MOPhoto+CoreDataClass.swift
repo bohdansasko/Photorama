@@ -2,7 +2,7 @@
 //  MOPhoto+CoreDataClass.swift
 //  Photorama
 //
-//  Created by Bogdan Sasko on 5/21/19.
+//  Created by Bogdan Sasko on 5/25/19.
 //  Copyright © 2019 Vinso. All rights reserved.
 //
 //

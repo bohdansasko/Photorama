@@ -2,7 +2,7 @@
 //  MOPhoto+CoreDataProperties.swift
 //  Photorama
 //
-//  Created by Bogdan Sasko on 5/21/19.
+//  Created by Bogdan Sasko on 5/25/19.
 //  Copyright © 2019 Vinso. All rights reserved.
 //
 //
@@ -17,9 +17,10 @@ extension MOPhoto {
         return NSFetchRequest<MOPhoto>(entityName: "MOPhoto")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var remoteURL: NSURL?
-    @NSManaged public var photoID: String?
+    @NSManaged public var viewCount: Int64
     @NSManaged public var dateTaken: NSDate?
+    @NSManaged public var photoID: String?
+    @NSManaged public var remoteURL: NSURL?
+    @NSManaged public var title: String?
 
 }
